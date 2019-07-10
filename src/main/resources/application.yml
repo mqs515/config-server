@@ -17,4 +17,12 @@ spring:
           password: password
 #端口号
 server:
-  port: 8888
+  port: 88889
+
+#配置服务注册中心
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
